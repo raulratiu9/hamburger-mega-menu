@@ -1,0 +1,157 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #051c2c;
+}
+
+/*Hamburger Menu */
+.dropdown {
+  position: absolute;
+  top: 10%;
+  width: 100%;
+  transition: 0.6s;
+  z-index: 1;
+  transform: translateX(-120%);
+  animation: transform 1.8s ease;
+}
+
+.dropdown.enabled {
+  transform: translateX(0);
+}
+
+.hamburger {
+  margin-left: 50%;
+  cursor: pointer;
+}
+
+.hamburger div {
+  margin: 10px;
+  width: 45px;
+  height: 5px;
+  background-color: #fff;
+  transition: all 0.3s;
+}
+
+.toggle .line1 {
+  transform: rotate(-45deg) translate(-16px, 6px);
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  transform: rotate(45deg) translate(-13px, -6px);
+}
+
+/* Principal Menu */
+nav ul.menu {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  left: 0px;
+  top: 100%;
+  width: 25vw;
+  border-top: 1px solid #fff;
+  background-color: #051c2c;
+  transform: translateX(-100%);
+  transition: transform 0.5s ease-in;
+  z-index: -1;
+  cursor: pointer;
+}
+
+nav ul.menu.nav-collapsed {
+  transform: translateX(0);
+}
+
+nav ul.menu li a {
+  margin-top: 20px;
+  padding: 15px 50px;
+  display: block;
+  font-weight: 600;
+  color: #fff;
+  line-height: 20px;
+}
+
+ul.menu li {
+  opacity: 0;
+}
+
+nav ul.menu li a:hover,
+nav ul.menu li a i:hover,
+ul.menu li a.active {
+  color: #5986c8;
+}
+
+.fas {
+  float: right;
+  margin: 10px;
+  padding: 0;
+  color: #fff;
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Dropdown Menu */
+.nav-wrapper {
+  padding: 2.5rem 5rem 3rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  text-align: left;
+  line-height: 0;
+  width: 65vw;
+  min-height: 100vh;
+  border-top: 1px solid #fff;
+  background: #f0f0f0;
+}
+
+.nav-wrapper ul li {
+  display: inline-flex;
+  width: 100%;
+}
+
+.nav-wrapper a {
+  color: #051c2c;
+  text-decoration: none;
+}
+
+.nav-wrapper a:hover {
+  color: #03339c;
+  text-decoration: underline;
+}
+
+.nav-header {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: #000;
+  border-bottom: 1px solid #b3b3b3;
+}
+
+.items {
+  padding: 0;
+  column-count: 3;
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+}
+
+h4 {
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 400;
+}
